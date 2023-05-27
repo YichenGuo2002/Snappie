@@ -5,19 +5,23 @@ import React from 'react';
 function App() {
   return (
     <div className="App w-full min-h-screen">
-      <div className = "topBar h-32 flex flex-row justify-between pt-8 pb-8 pl-32 pr-32">
+      <div className = "topBar h-24 flex flex-row justify-start pt-8 pb-8 pl-32 pr-32">
         <img src={logo} className = "h-full object-contain object-center align-middle" alt="logo"/>
-        <p>Hi</p>
       </div>
 
-      <nav className = "navBar border border-black w-1/4">
-        <p>History</p>
-      </nav>
+      <div className = "flex flex-row ">
+        <nav className = "navBar min-h-menu w-1/4 flex flex-col p-8">
+          <p>My Dashboard</p>
+          <p>Snappie Activity</p>
+          <p>FAQ</p>
+          <p>Updates</p>
+          <p>Help</p>
+        </nav>
 
-      <div className = "chat">
-        <p>Hi</p>
+        <div className = "chat w-3/4 m-4 rounded-chat bg-chat">
+          <p>Hi</p>
+        </div>
       </div>
-
     </div>
   );
 }

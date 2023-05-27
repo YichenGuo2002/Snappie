@@ -19,3 +19,15 @@ code {
 .topBar{
   background-color: #11195a;
 }
+
+.min-h-menu{
+  min-height:calc(100vh - 6rem);
+}
+
+.bg-chat{
+  background-color: #eeeeee;
+}
+
+.rounded-chat{
+  border-radius: 3rem;
+}
