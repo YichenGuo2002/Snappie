@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
 }
 
 code {
@@ -18,6 +19,15 @@ code {
 
 .topBar{
   background-color: #11195a;
+}
+
+.navBut{
+  padding:1rem;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  /*border-bottom-width: 1px;
+  border-bottom-color:grey;*/
+  width: 100%;
 }
 
 .min-h-menu{
