@@ -24,10 +24,48 @@ code {
   min-height:calc(100vh - 6rem);
 }
 
+.max-h-menu{
+  max-height:calc(100vh - 8rem);
+}
+
+.h-menu{
+  height:calc(100vh - 6rem);
+}
+
 .bg-chat{
   background-color: #eeeeee;
 }
 
 .rounded-chat{
   border-radius: 3rem;
+}
+
+.rounded-t-chat{
+  border-top-left-radius: 3rem; 
+  border-top-right-radius: 3rem; 
+}
+
+.rounded-b-chat{
+  border-bottom-left-radius: 3rem; 
+  border-bottom-right-radius: 3rem; 
+}
+
+.promptResponse{
+  background-color: white;
+  margin-top:1rem;
+  margin-left:1rem;
+  margin-right:1rem;
+  padding:1rem;
+  border-radius: 0.5rem;
+  text-align:left;
+}
+
+.promptQuestion{
+  background-color: #d6d6d6;
+  margin-top:1rem;
+  margin-left:1rem;
+  margin-right:1rem;
+  padding:1rem;
+  border-radius: 0.5rem;
+  text-align:left;
 }
