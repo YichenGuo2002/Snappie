@@ -48,6 +48,7 @@ function App() {
       
       chatArea.appendChild(promptResponse);
 
+      chatArea.scrollTop = chatArea.scrollHeight;
     }
   }
 
@@ -89,13 +90,13 @@ function App() {
           <div className="prompt w-full p-4 bg-chat rounded-b-chat">
             <div className="inline-block w-full flex flex-row">
               <textarea id="message" rows="1" 
-              className="block resize-none overflow-hidden p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg 
+              className="block resize-none overflow-hidden p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg 
               border border-black focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
               placeholder="Send a message...">
               </textarea>
-              <button onClick = {send} className="border border-black rounded-lg">Send</button>
+              <button onClick = {send} className="border border-black rounded-r-lg">Send</button>
             </div>
-            <p className="">Snappie may display inaccurate or offensive information that doesn’t represent Snap Instruct's views.</p>
+            <p className="text-sm">Snappie may display inaccurate or offensive information that doesn’t represent Snap Instruct's views.</p>
           </div>
         </div>
       </div>
