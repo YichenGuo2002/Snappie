@@ -1,6 +1,7 @@
 import logo from './static/logo.png'
 import './App.css';
 import React from 'react';
+import {prompt} from "./fetch";
 
 function App() {
   let response1 = "Octavate is a company that positions itself as an audio art dealer brand. Their main focus is on reactivating undervalued talent in the music industry through their unique artist management system. They combine expertise in music, data, and finance to identify and support promising artists who may have been overlooked or underappreciated.";
@@ -12,26 +13,41 @@ function App() {
     const value = textarea.value.trim();
     
     if (value.length >= 1) {
-      console.log(value)
       const promptQuestion = document.createElement('div');
       promptQuestion.className = 'promptQuestion';
       
       const userParagraph = document.createElement('p');
       userParagraph.textContent = 'Yichen';
       
-      const responseParagraph = document.createElement('p');
-      responseParagraph.textContent = value;
+      const promptParagraph = document.createElement('p');
+      promptParagraph.textContent = value;
       
       promptQuestion.appendChild(userParagraph);
-      promptQuestion.appendChild(responseParagraph);
+      promptQuestion.appendChild(promptParagraph);
       
       chatArea.appendChild(promptQuestion);
-      
+
       // Clear the textarea value
       textarea.value = '';
-      
+
       // Scroll to the bottom of the chatArea div
       chatArea.scrollTop = chatArea.scrollHeight;
+      
+      const response = await prompt(value);
+      const promptResponse = document.createElement('div');
+      promptResponse.className = 'promptResponse';
+      
+      const aiParagraph = document.createElement('p');
+      aiParagraph.textContent = 'Snappie';
+      
+      const responseParagraph = document.createElement('p');
+      responseParagraph.textContent = response;
+      
+      promptResponse.appendChild(aiParagraph);
+      promptResponse.appendChild(responseParagraph);
+      
+      chatArea.appendChild(promptResponse);
+
     }
   }
 
@@ -63,14 +79,10 @@ function App() {
             <p>Progress: 40%</p>
           </div>
 
-          <div className = "chatArea grow overflow-auto" id="chatArea">
-            <div className = "promptResponse">
-              <p>Yichen</p>
-              <p>{response1}</p>
-            </div>
+          <div className = "chatArea grow overflow-y-auto overflow-x-hidden w-full p-4" id="chatArea">
           </div>
 
-          <div className="prompt  w-full p-4 bg-chat rounded-b-chat">
+          <div className="prompt w-full p-4 bg-chat rounded-b-chat">
             <div className="inline-block w-full flex flex-row">
               <textarea id="message" rows="1" 
               className="block resize-none overflow-hidden p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg 
