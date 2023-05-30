@@ -1,7 +1,7 @@
 import logo from './static/logo.png'
 import './App.css';
-import React from 'react';
-import {prompt} from "./fetch";
+import React, { useState, useEffect } from "react";
+import {prompt, start} from "./fetch";
 
 function App() {
   let response1 = "Octavate is a company that positions itself as an audio art dealer brand. Their main focus is on reactivating undervalued talent in the music industry through their unique artist management system. They combine expertise in music, data, and finance to identify and support promising artists who may have been overlooked or underappreciated.";
@@ -50,6 +50,10 @@ function App() {
 
     }
   }
+
+  useEffect(() => {
+    start();
+  }, [])
 
   return (
     <div className="App w-full min-h-screen">
